@@ -1,0 +1,1 @@
+# ai-training-course-2025
