@@ -1,0 +1,548 @@
+{
+  "book_title": "AI Engineering for Developers",
+  "author": "Fahim",
+  "status": "not_started",
+  "modules": [
+    {
+      "module_id": 1,
+      "module_title": "Prompt Engineering Foundations for Developers",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "1.1",
+          "chapter_title": "How LLMs Interpret Prompts",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "LLMs read prompts linearly",
+            "Earlier instructions have more influence",
+            "Instructions must be explicit, not implied"
+          ]
+        },
+        {
+          "chapter_id": "1.2",
+          "chapter_title": "Writing Prompts Like API Contracts",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Define inputs",
+            "Define output types",
+            "Define constraints",
+            "Define failure modes",
+            "Example: instruction as a TypeScript interface"
+          ]
+        },
+        {
+          "chapter_id": "1.3",
+          "chapter_title": "Giving the Model a Role",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Use roles such as 'Senior engineer', 'API validator', 'Bug triage assistant'",
+            "Improves accuracy and reduces hallucination"
+          ]
+        },
+        {
+          "chapter_id": "1.4",
+          "chapter_title": "Using Delimiters",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Prevent mixing instructions with content",
+            "Delimiter patterns like <<<CODE>>> and XML tagging"
+          ]
+        },
+        {
+          "chapter_id": "1.5",
+          "chapter_title": "Providing Examples (Few-Shot Prompting)",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "One/two good examples improve results",
+            "How to structure examples to avoid contamination"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 2,
+      "module_title": "Context Engineering & Memory Hygiene",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "2.1",
+          "chapter_title": "Understanding Context Windows vs Effective Context",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Long contexts ≠ usable contexts",
+            "Introduce Context Rot",
+            "Recent research from Chroma and UnderstandingAI",
+            "Why noisy + long = degraded results"
+          ]
+        },
+        {
+          "chapter_id": "2.2",
+          "chapter_title": "Chunking Strategies",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Chunk by semantic meaning",
+            "Chunk by headings",
+            "Chunk by code structure/AST",
+            "Chunk by vector similarity",
+            "Avoid naive big-dump prompting"
+          ]
+        },
+        {
+          "chapter_id": "2.3",
+          "chapter_title": "Selective Retrieval (RAG Practices)",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Use embeddings to fetch only what's relevant",
+            "Hybrid search",
+            "Reranking"
+          ]
+        },
+        {
+          "chapter_id": "2.4",
+          "chapter_title": "Context Compression / Summaries",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Snapshot summaries",
+            "Rolling memory",
+            "State vs ephemeral context"
+          ]
+        },
+        {
+          "chapter_id": "2.5",
+          "chapter_title": "Context Validation & Pruning",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Remove garbage context",
+            "Filter by relevance score",
+            "Prevent context drift"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 3,
+      "module_title": "Instruction Engineering (Systematic Prompt Design)",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "3.1",
+          "chapter_title": "Defining Output Formats Strictly",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Respond ONLY with JSON",
+            "Follow this schema exactly",
+            "Do not write explanations"
+          ]
+        },
+        {
+          "chapter_id": "3.2",
+          "chapter_title": "Priority Ordering",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Accuracy",
+            "Format",
+            "Brevity"
+          ]
+        },
+        {
+          "chapter_id": "3.3",
+          "chapter_title": "Negative Instructions",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Never guess",
+            "If insufficient information, return null",
+            "Do not invent APIs"
+          ]
+        },
+        {
+          "chapter_id": "3.4",
+          "chapter_title": "Complex Task Splitting",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Break tasks into multi-step flows",
+            "Avoid blended logic by using explicit steps",
+            "Example tasks: refactoring, test generation, summarization"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 4,
+      "module_title": "Multi-Step LLM Workflows & Pipelines",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "4.1",
+          "chapter_title": "LLMs as Planners",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Plan-first strategy",
+            "Sequential execution increases reliability"
+          ]
+        },
+        {
+          "chapter_id": "4.2",
+          "chapter_title": "Validation Steps",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "JSON validation",
+            "Type checking",
+            "Business-rule validation"
+          ]
+        },
+        {
+          "chapter_id": "4.3",
+          "chapter_title": "Correction Loops",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "If validation fails, ask model to fix",
+            "Never trust the first output"
+          ]
+        },
+        {
+          "chapter_id": "4.4",
+          "chapter_title": "Deterministic + AI Hybrid Approach",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "LLM decides WHAT",
+            "Deterministic code executes HOW"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 5,
+      "module_title": "Testing & Evaluating LLM Outputs",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "5.1",
+          "chapter_title": "Why LLMs Need Tests",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Hallucinations",
+            "Model changes",
+            "Prompt drift",
+            "Garbage in → garbage out"
+          ]
+        },
+        {
+          "chapter_id": "5.2",
+          "chapter_title": "Prompt Unit Tests",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Input → Expected Output",
+            "Automated comparisons",
+            "Snapshot tests"
+          ]
+        },
+        {
+          "chapter_id": "5.3",
+          "chapter_title": "Regression Tests",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "New model versions",
+            "Detect silent failures"
+          ]
+        },
+        {
+          "chapter_id": "5.4",
+          "chapter_title": "Evaluation Datasets",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Synthetic datasets",
+            "Real datasets",
+            "Edge cases"
+          ]
+        },
+        {
+          "chapter_id": "5.5",
+          "chapter_title": "Quality Scoring",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "LLM as a judge",
+            "Semantic similarity scoring",
+            "Correctness metrics"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 6,
+      "module_title": "Safety, Guardrails & Reliability",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "6.1",
+          "chapter_title": "Prompt Injection Protection",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Filter malicious inputs",
+            "Disallow overrides",
+            "Separate system/instruction/user layers"
+          ]
+        },
+        {
+          "chapter_id": "6.2",
+          "chapter_title": "Schema Enforcement",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "JSON schema validation",
+            "Strong typing"
+          ]
+        },
+        {
+          "chapter_id": "6.3",
+          "chapter_title": "Error Handling Patterns",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Retries",
+            "Fallback models",
+            "Safe defaults"
+          ]
+        },
+        {
+          "chapter_id": "6.4",
+          "chapter_title": "Monitoring Output Drift",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Quality can degrade silently",
+            "Continuous evaluation needed"
+          ]
+        },
+        {
+          "chapter_id": "6.5",
+          "chapter_title": "Logging Everything",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Log prompts",
+            "Log outputs",
+            "Log errors",
+            "Track cost",
+            "Track latency"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 7,
+      "module_title": "Agent Design Patterns (Without the Hype)",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "7.1",
+          "chapter_title": "Agents as Modular Workers",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Each agent has a specific job",
+            "Minimal tool access",
+            "Small scoped context",
+            "Clear IO contract"
+          ]
+        },
+        {
+          "chapter_id": "7.2",
+          "chapter_title": "Avoiding Agent Overload",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Avoid multipurpose agents",
+            "Avoid full-codebase context dumps"
+          ]
+        },
+        {
+          "chapter_id": "7.3",
+          "chapter_title": "Agent Hand-Off Rules",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "How agents pass validated state",
+            "Avoiding context pollution"
+          ]
+        },
+        {
+          "chapter_id": "7.4",
+          "chapter_title": "Stop Criteria",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Prevent infinite loops",
+            "Avoid wandering behaviour"
+          ]
+        },
+        {
+          "chapter_id": "7.5",
+          "chapter_title": "Human-in-the-Loop Integration",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Approvals",
+            "Sanity checks",
+            "Escalation rules"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 8,
+      "module_title": "AI-Augmented Developer Productivity",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "8.1",
+          "chapter_title": "Personal Developer Workflows",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Boilerplate generation",
+            "Debugging",
+            "Rewrite complex code",
+            "Summaries of large codebases",
+            "API documentation"
+          ]
+        },
+        {
+          "chapter_id": "8.2",
+          "chapter_title": "Improving DX in Teams",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "PR review bots",
+            "Changelog generation",
+            "Auto-generated docs",
+            "Architecture Q&A agents"
+          ]
+        },
+        {
+          "chapter_id": "8.3",
+          "chapter_title": "AI in DevOps",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Log explanation",
+            "Runbook generation",
+            "Failure analysis",
+            "Troubleshooting"
+          ]
+        },
+        {
+          "chapter_id": "8.4",
+          "chapter_title": "AI in Product Teams",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Rapid prototyping",
+            "Idea expansion",
+            "Specification drafting",
+            "User story creation"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 9,
+      "module_title": "Cost, Performance & Scaling",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "9.1",
+          "chapter_title": "Token Budgeting",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Cost control",
+            "Latency management"
+          ]
+        },
+        {
+          "chapter_id": "9.2",
+          "chapter_title": "Prompt Compression",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Summaries for repeated data",
+            "Using embeddings"
+          ]
+        },
+        {
+          "chapter_id": "9.3",
+          "chapter_title": "Model Decision Framework",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Cheap models for bulk tasks",
+            "Smarter models for complex logic"
+          ]
+        },
+        {
+          "chapter_id": "9.4",
+          "chapter_title": "System Architecture Patterns",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Queueing",
+            "Rate limiting",
+            "Caching",
+            "Retries"
+          ]
+        }
+      ]
+    },
+    {
+      "module_id": 10,
+      "module_title": "The 10 Golden Rules of LLM Engineering",
+      "status": "not_started",
+      "chapters": [
+        {
+          "chapter_id": "10.1",
+          "chapter_title": "The Golden Rules Explained",
+          "status": "not_started",
+          "content": "",
+          "topics": [
+            "Never trust the first answer",
+            "Validate everything",
+            "Enforce schemas",
+            "Control context",
+            "Retrieval > brute force",
+            "Break tasks into steps",
+            "Provide examples",
+            "Fail safely",
+            "Use LLMs as validators",
+            "Monitor continuously"
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
